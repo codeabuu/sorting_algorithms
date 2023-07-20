@@ -33,10 +33,8 @@ void max_heapify(int *array, size_t size, size_t base, size_t root)
 	right = 2 * root + 2;
 	large = root;
 
-	if (left < base && array[left] > array[large])
-		large = left;
-	if (right < base && array[right] > array[large])
-		large = right;
+	large = (left < base && array[left] > array[large]) ? left : large;
+	large = (right < base && array[right] > array[large]) ? right : large;
 
 	if (large != root)
 	{
@@ -62,8 +60,12 @@ void heap_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 		return;
 
-	for (i = (size / 2) - 1; i >= 0; i--)
+	i = (size / 2) - 1;
+	while (i >= 0)
+	{
 		max_heapify(array, size, size, i);
+		i--;
+	}
 
 	for (i = size - 1; i > 0; i--)
 	{
