@@ -9,12 +9,14 @@
  */
 int get_max(int *array, int size)
 {
-	int max, i;
+	int max, i = 1;
 
-	for (max = array[0], i = 1; i < size; i++)
+	max = array[0];
+	while (i < size)
 	{
 		if (array[i] > max)
 			max = array[i];
+		i++;
 	}
 
 	return (max);
