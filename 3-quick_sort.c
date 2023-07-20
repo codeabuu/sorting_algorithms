@@ -6,7 +6,7 @@ int lomuto_part(int *array, size_t size, int left, int right);
 void lomuto_sort(int *array, size_t size, int left, int right);
 
 /**
- * swap_ints - Swap two integers in an array.
+ * swap_integers - Swap two integers in an array.
  * @a: The first integer to swap.
  * @b: The second integer to swap.
  */

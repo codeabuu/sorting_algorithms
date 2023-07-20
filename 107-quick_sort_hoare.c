@@ -46,10 +46,10 @@ int hoare_partition(int *array, size_t size, int left, int right)
 			;
 		while (array[--below] > pivot)
 			;
-		
+
 		if (above >= below)
 			break;
-		
+
 		swap_ints(array + above, array + below);
 		print_array(array, size);
 
