@@ -1,6 +1,6 @@
 #include "sort.h"
 
-void swap_ints(int *a, int *b);
+void swap_integers(int *a, int *b);
 int hoare_partition(int *array, size_t size, int left, int right);
 void hoare_sort(int *array, size_t size, int left, int right);
 void quick_sort_hoare(int *array, size_t size);
@@ -10,7 +10,7 @@ void quick_sort_hoare(int *array, size_t size);
  * @a: The first integer to swap.
  * @b: The second integer to swap.
  */
-void swap_ints(int *a, int *b)
+void swap_integers(int *a, int *b)
 {
 	int tmp;
 
@@ -34,26 +34,27 @@ void swap_ints(int *a, int *b)
  */
 int hoare_partition(int *array, size_t size, int left, int right)
 {
-	int pivot, above, below;
+    int pivot, above, below;
 
-	pivot = array[right];
-	for (above = left - 1, below = right + 1; above < below;)
-	{
-		do {
-			above++;
-		} while (array[above] < pivot);
-		do {
-			below--;
-		} while (array[below] > pivot);
+    pivot = array[right];
+    above = left - 1;
+    below = right + 1;
 
-		if (above < below)
-		{
-			swap_ints(array + above, array + below);
-			print_array(array, size);
-		}
-	}
+    while (1)
+    {
+        while (array[++above] < pivot)
+            ;
+        while (array[--below] > pivot)
+            ;
 
-	return (above);
+        if (above >= below)
+            break;
+
+        swap_integers(array + above, array + below);
+        print_array(array, size);
+    }
+
+    return above;
 }
 
 /**

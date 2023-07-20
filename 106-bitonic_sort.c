@@ -35,11 +35,13 @@ void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
 
 	if (seq > 1)
 	{
-		for (i = start; i < start + jump; i++)
+		i = start;
+		while (i < start + jump)
 		{
 			if ((flow == UP && array[i] > array[i + jump]) ||
 			    (flow == DOWN && array[i] < array[i + jump]))
 				swap_ints(array + i, array + i + jump);
+			i++;
 		}
 		bitonic_merge(array, size, start, jump, flow);
 		bitonic_merge(array, size, start + jump, jump, flow);
