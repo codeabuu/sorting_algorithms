@@ -69,29 +69,31 @@ char get_value(deck_node_t *card)
  * insertion_sort_deck_kind - Sort a deck of cards from spades to diamonds.
  * @deck: A pointer to the head of a deck_node_t doubly-linked list.
  */
+
 void insertion_sort_deck_kind(deck_node_t **deck)
 {
-	deck_node_t *iter, *insert, *tmp;
+    deck_node_t *iter, *insert, *tmp;
 
-	for (iter = (*deck)->next; iter != NULL; iter = tmp)
-	{
-		tmp = iter->next;
-		insert = iter->prev;
-		while (insert != NULL && insert->card->kind > iter->card->kind)
-		{
-			insert->next = iter->next;
-			if (iter->next != NULL)
-				iter->next->prev = insert;
-			iter->prev = insert->prev;
-			iter->next = insert;
-			if (insert->prev != NULL)
-				insert->prev->next = iter;
-			else
-				*deck = iter;
-			insert->prev = iter;
-			insert = iter->prev;
-		}
-	}
+    iter = (*deck)->next;
+    while (iter != NULL)
+    {
+        tmp = iter->next;
+        insert = iter->prev;
+        while (insert != NULL && insert->card->kind > iter->card->kind)
+        {
+            insert->next = iter->next;
+            iter->next = insert;
+            iter->prev = insert->prev;
+            insert->prev = iter;
+            if (iter->prev != NULL)
+                iter->prev->next = iter;
+            else
+                *deck = iter;
+
+            insert = iter->prev;
+        }
+        iter = tmp;
+    }
 }
 
 /**
@@ -103,7 +105,8 @@ void insertion_sort_deck_value(deck_node_t **deck)
 {
 	deck_node_t *iter, *insert, *tmp;
 
-	for (iter = (*deck)->next; iter != NULL; iter = tmp)
+	iter = (*deck)->next;
+	for (; iter != NULL; iter = tmp)
 	{
 		tmp = iter->next;
 		insert = iter->prev;
