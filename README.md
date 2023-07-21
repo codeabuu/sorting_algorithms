@@ -1,5 +1,5 @@
 # 0x1B. C - Sorting algorithms & Big O
-# TEAM PROJECT BY - LAWRENCE MADUABUCHI & ABDULLAHI NGUI
+### TEAM PROJECT BY - LAWRENCE MADUABUCHI & ABDULLAHI NGUI
 
 ## GENERAL :open_book::open_book::open_book::
 
