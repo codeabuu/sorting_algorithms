@@ -56,10 +56,12 @@ void counting_sort(int *array, size_t size)
 		count[i] += count[i - 1];
 	print_array(count, max + 1);
 
-	for (i = 0; i < (int)size; i++)
+	i = 0;
+	while (i < (int)size)
 	{
 		sorted[count[array[i]] - 1] = array[i];
 		count[array[i]] -= 1;
+		i++;
 	}
 
 	for (i = 0; i < (int)size; i++)
