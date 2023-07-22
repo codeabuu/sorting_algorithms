@@ -30,7 +30,7 @@ void selection_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 		return;
 
-	for (; i < size - 1; i++)
+	while (i < size - 1)
 	{
 		min = array + i;
 		for (j = i + 1; j < size; j++)
@@ -43,5 +43,6 @@ void selection_sort(int *array, size_t size)
 			swap_ints(array + i, min);
 			print_array(array, size);
 		}
+		i++;
 	}
 }
