@@ -271,3 +271,13 @@ int main(void)
     print_array(array, n);
     return (0);
 }
+alex@/tmp/sort$ gcc -Wall -Wextra -Werror -pedantic  -std=gnu89 100-main.c 100-shell_sort.c print_array.c -o shell
+alex@/tmp/sort$ ./shell
+19, 48, 99, 71, 13, 52, 96, 73, 86, 7
+
+13, 7, 96, 71, 19, 48, 99, 73, 86, 52
+7, 13, 19, 48, 52, 71, 73, 86, 96, 99
+
+7, 13, 19, 48, 52, 71, 73, 86, 96, 99
+alex@/tmp/sort$
+</code></pre>
