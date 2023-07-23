@@ -247,3 +247,10 @@ alex@/tmp/sort$ ./select
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
 alex@/tmp/sort$
 </code></pre>
+<code><pre>
+**<p>Write a function that sorts an array of integers in ascending order using the Shell sort algorithm, using the Knuth sequence</p>**
+
+<pre><code>alex@/tmp/sort$ cat 100-main.c
+#include <stdio.h>
+#include <stdlib.h>
+#include "sort.h"
