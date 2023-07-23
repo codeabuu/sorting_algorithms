@@ -238,3 +238,5 @@ All of the following files are programs written in C:
 | ` 1. Insertion sort` | Write a function that sorts a doubly linked list of integers in ascending order using the Insertion sort algorithm|
 | ` 2. Selection sort; 2-selection_sort.c, 2-O` | Write a function that sorts an array of integers in ascending order using the Selection sort algorithm|
 | ` 3. Quick sort` | Write a function that sorts an array of integers in ascending order using the Quick sort algorithm.|
+| ` 4. Shell sort - Knuth Sequence` | Write a function that sorts an array of integers in ascending order using the Shell sort algorithm, using the Knuth sequence.|
+| ` 5. Cocktail shaker sort` | Write a function that sorts a doubly linked list of integers in ascending order using the Cocktail shaker sort algorithm.|
