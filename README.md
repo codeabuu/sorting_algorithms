@@ -246,3 +246,4 @@ All of the following files are programs written in C:
 | ` 9. Radix sort` | Write a function that sorts an array of integers in ascending order using the Radix sort algorithm.|
 | ` 10. Bitonic sort` | Write a function that sorts an array of integers in ascending order using the Bitonic sort algorithm.|
 | ` 11. Quick Sort - Hoare Partition scheme` | Write a function that sorts an array of integers in ascending order using the Quick sort algorithm.|
+| ` 12. Dealer; 1000-sort_deck.c, deck.h` | Write a function that sorts a deck of cards.|
